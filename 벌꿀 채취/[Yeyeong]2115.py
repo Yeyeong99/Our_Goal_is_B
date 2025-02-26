@@ -2,31 +2,27 @@ import sys
 
 sys.stdin = open("input.txt", "r")
 
-
-def subsets(arg_list):
-    sub_sets = []
-    for n in range(1 << len(arg_list)):
-        sub_set = []
-        for m in range(len(arg_list)):
-            if n & (1 << m):
-                sub_set.append((arg_list[m]))
-        if sub_set and sub_set not in sub_sets:
-            sub_sets.append(sub_set[:])
-    return sub_sets
+# 선택할 벌통의 인덱스, 여태까지 선택한 벌통의 이익, 벌통의 합
 
 
-def find_max(arg_list):
-    result = []
-    for arg in arg_list:
-        current_sum = 0
-        if sum(arg) <= C:
-            for a in arg:
-                current_sum += a ** 2
-            result.append(current_sum)
-        else:
-            current_sum += a ** 2
-            result.append(current_sum)
-    return result
+def dfs(honey_idx, honey_benefit, honey_sum):
+    global part_sum
+
+    # 백트래킹, 여태까지 선택한 꿀의 합이 C를 넘으면 이득을 알 필요가 없음
+    if honey_sum > C: return
+
+    # 선택할 벌통이 M에 도달하면 최대값 갱신
+    if honey_idx == M:
+        part_sum = max(part_sum, honey_benefit)
+
+    cnt_sum = honeys[i][j + honey_idx]
+    cnt_benefit = honeys[i][j + honey_idx] ** 2
+
+    # 현재 꿀을 선택 함
+    dfs(honey_idx + 1, honey_benefit + cnt_benefit, honey_sum + cnt_sum)
+
+    # 현재 꿀을 선택 안함
+    dfs(honey_idx + 1, honey_benefit, honey_sum)
 
 
 T = int(input())
@@ -34,23 +30,20 @@ T = int(input())
 for t in range(1, T + 1):
     N, M, C = map(int, input().split())
     honeys = [list(map(int, input().split())) for _ in range(N)]
-    first_max = -float('inf')
-    second_max = -float('inf')
+    max_sum = 0
 
     for i in range(N):
         for j in range(N - M + 1):
-            current_honey = honeys[i][j: j + M]
-            if min(current_honey) > C:
-                break
-            current_honey_sub = (subsets(current_honey))
-            first_max = max(first_max, max(find_max(current_honey_sub)))
+            part_sum = 0
+
+            dfs(0, 0, 0)
+            fst_max = part_sum
 
             for snd_i in range(i, N):
                 for snd_j in range(0, N - M + 1):
                     if snd_i == i and snd_j < j + M:
                         continue
-                    snd_select_honey_list = honeys[snd_i][snd_j: snd_j + M]
-                    snd_sub = (subsets(snd_select_honey_list))
-                    second_max = max(second_max, max(find_max(snd_sub)))
-
-    print(first_max, second_max)
+                    part_sum = 0
+                    dfs(snd_i, snd_j, 0)
+                    snd_max = part_sum
+                    max_sum = max(max_sum, fst_max + snd_max)
