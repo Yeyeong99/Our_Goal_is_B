@@ -34,26 +34,23 @@ T = int(input())
 for t in range(1, T + 1):
     N, M, C = map(int, input().split())
     honeys = [list(map(int, input().split())) for _ in range(N)]
+    first_max = -float('inf')
+    second_max = -float('inf')
 
-    stack = []
     for i in range(N):
         for j in range(N - M + 1):
-            current_honey = []
-            idx = []
-            for k in range(M):
-                current_honey.append(honeys[i][j + k])
-                idx.append([i, j + k])
+            current_honey = honeys[i][j: j + M]
             if min(current_honey) > C:
                 break
+            current_honey_sub = (subsets(current_honey))
+            first_max = max(first_max, max(find_max(current_honey_sub)))
 
-            if not stack:
-                stack.append(current_honey)
-            else:
-                last_in = stack[-1]
-                last_in_sub = (subsets(last_in))
-                current_honey_sub = (subsets(current_honey))
-                if max(find_max(last_in_sub)) <= max(find_max(current_honey_sub)):
-                    stack.pop()
-                    stack.append(current_honey)
-                    honeys[i][j + k] = 0
-    print(stack)
+            for snd_i in range(i, N):
+                for snd_j in range(0, N - M + 1):
+                    if snd_i == i and snd_j < j + M:
+                        continue
+                    snd_select_honey_list = honeys[snd_i][snd_j: snd_j + M]
+                    snd_sub = (subsets(snd_select_honey_list))
+                    second_max = max(second_max, max(find_max(snd_sub)))
+
+    print(first_max, second_max)
