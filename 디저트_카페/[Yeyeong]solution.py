@@ -14,10 +14,12 @@ def dfs(i, j, direction, idx, visited, current_sum):
     else:
         # 범위 밖을 벗어남 or 같은 디저트
         if (i < 0 or N <= i) or (j < 0 or N <= j) or desserts[i][j] in visited:
-            nx = i - dx[direction]
-            ny = j - dy[direction]
+            idx.pop()
+            before_idx = idx[-1]
+
+            nx = before_idx[0]
+            ny = before_idx[1]
             direction += 1
-            before_idx = idx.pop()
             visited.pop()
             current_sum -= desserts[before_idx[0]][before_idx[1]]
         else:
