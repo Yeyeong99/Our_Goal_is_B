@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4531e738-b99a-4067-a658-fc7504d06740" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/벌꿀 채취/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/벌꿀 채취/[Yeyeong]2115.py" beforeDir="false" afterPath="$PROJECT_DIR$/벌꿀 채취/[Yeyeong]2115.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,12 +36,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/벌꿀 채취" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/숫자 만들기" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\SSAFY\Desktop\all\SWEA_A\숫자 만들기" />
       <recent name="C:\Users\SSAFY\Desktop\all\SWEA_A\벌꿀 채취" />
     </key>
   </component>
@@ -95,5 +97,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
