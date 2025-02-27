@@ -1,6 +1,9 @@
 import sys
 sys.stdin = open("input.txt", "r")
 
+dx = [1, 1, -1, -1]
+dy = [1, -1, -1, 1]
+
 
 def dfs(i, j, direction, idx, visited, current_sum):
     global max_sum
@@ -9,38 +12,29 @@ def dfs(i, j, direction, idx, visited, current_sum):
             max_sum = max(max_sum, current_sum)
             return
     else:
-        if (i < 0 or N <= i) and (j < 0 or N <= j):
-            return
+        # 범위 밖을 벗어남 or 같은 디저트
+        if (i < 0 or N <= i) or (j < 0 or N <= j) or desserts[i][j] in visited:
+            nx = i - dx[direction]
+            ny = j - dy[direction]
+            direction += 1
+            before_idx = idx.pop()
+            visited.pop()
+            current_sum -= desserts[before_idx[0]][before_idx[1]]
+        else:
+            idx += [[i, j]]
+            visited += [desserts[i][j]]
+            current_sum += desserts[i][j]
 
-        idx += [[i, j]]
-        visited += [desserts[i][j]]
-        current_sum += desserts[i][j]
+            nx = i + dx[direction]
+            ny = j + dy[direction]
 
-        if direction == 0:
-            nx = i + 1
-            ny = j + 1
-        elif direction == 1:
-            nx = i + 1
-            ny = j - 1
-        elif direction == 2:
-            nx = i - 1
-            ny = j - 1
-        elif direction == 3:
-            nx = i - 1
-            ny = j + 1
+            # 이미 방문한 카페로 되돌아 가는 경우 (Fig. 5)
+            if nx != idx[0][0] and ny != idx[0][1] and [nx, ny] in idx:
+                return
 
-        # 이미 방문한 카페로 되돌아 가는 경우 (Fig. 5)
-        if nx != idx[0][0] and ny != idx[0][1] and [nx, ny] in idx:
-            return
-        # 좌표는 다르지만 같은 종류의 디저트를 파는 경우
-        if desserts[nx][ny] in visited:
-            return
+        dfs(nx, ny, direction, idx, visited, current_sum)
 
-        dfs(nx, ny, idx, visited, current_sum)
 
-        idx = []
-        visited = []
-        current_sum = 0
 
 
 T = int(input())
