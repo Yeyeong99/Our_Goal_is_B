@@ -7,11 +7,7 @@ dy = [1, -1, -1, 1]
 
 def dfs(i, j, idx, result, current_sum):
     global max_sum
-
     if len(idx) >= 2:
-        if i != idx[0][0] and j != idx[0][1] and desserts[i][j] in result:
-            return
-
         if i == idx[0][0] and j == idx[0][1]:
             max_sum = max(max_sum, current_sum)
             return
@@ -26,6 +22,8 @@ def dfs(i, j, idx, result, current_sum):
             if nx == idx[-1][0]:
                 continue
             if ny == idx[-1][1]:
+                continue
+            if nx != idx[0][0] and ny != idx[0][1] and desserts[nx][ny] in result:
                 continue
 
             current_sum += desserts[nx][ny]
