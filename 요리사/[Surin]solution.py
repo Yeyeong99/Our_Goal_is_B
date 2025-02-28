@@ -12,10 +12,9 @@ def dfs(i, arr):
 
         syn1, syn2 = 0, 0    # A, B에게 만들어줄 요리의 재료들의 시너지 합
         for i in range(N//2-1):
-            for j in range(i, N//2):
-                if i != j:    # 같은 재료를 선택하지는 않았으니깐
-                    syn1 += (S[arr[i]][arr[j]]+S[arr[j]][arr[i]])
-                    syn2 += (S[others[i]][others[j]]+S[others[j]][others[i]])
+            for j in range(i+1, N//2):    # i+1 부터 시작하면 i == j인 경우가 없음.
+                syn1 += (S[arr[i]][arr[j]]+S[arr[j]][arr[i]])
+                syn2 += (S[others[i]][others[j]]+S[others[j]][others[i]])
 
         min_gap = min(min_gap, abs(syn1-syn2))    # 가장 작은 차이 구하기
         return
