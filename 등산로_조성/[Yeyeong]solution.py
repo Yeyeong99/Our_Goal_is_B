@@ -28,10 +28,11 @@ def dfs(i, j, cnt, dis, way):
                         dis -= 1
                         maps[original[0]][original[1]] = original[2]
                         way.pop()
+                    cnt = 1
                 else:
-                    for x_, y_ in way:
-                        print([x_, y_], maps[x_][y_], end=" ")
-                    print()
+                    # for x_, y_ in way:
+                    #     print(cnt, [x_, y_], maps[x_][y_], end=" ")
+                    # print()
                     max_distance = max(max_distance, dis)
                     continue
             else:

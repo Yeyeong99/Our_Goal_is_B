@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb1d586a-74de-4655-aadb-05a3a7848037" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/등산로_조성/input.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/등산로_조성/[Yeyeong]solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/등산로_조성/[Yeyeong]solution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/등산로_조성/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/등산로_조성/input.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -193,7 +192,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/등산로_조성/[Yeyeong]solution.py</url>
-          <line>37</line>
+          <line>38</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
