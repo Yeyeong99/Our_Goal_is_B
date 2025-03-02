@@ -7,6 +7,7 @@
     <list default="true" id="cb1d586a-74de-4655-aadb-05a3a7848037" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/벽돌깨기/[Yeyeong]solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/벽돌깨기/[Yeyeong]solution.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -218,17 +219,17 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>41</line>
+          <line>39</line>
           <option name="timeStamp" value="100" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>43</line>
+          <line>41</line>
           <option name="timeStamp" value="101" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>42</line>
+          <line>40</line>
           <option name="timeStamp" value="102" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -243,13 +244,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>25</line>
+          <line>28</line>
           <option name="timeStamp" value="113" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>26</line>
-          <option name="timeStamp" value="114" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
