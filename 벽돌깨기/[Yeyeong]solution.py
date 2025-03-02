@@ -24,12 +24,13 @@ def explosion(i, j, visited):  # 벽돌 깨기
                         explosion(nx, ny, visited) # 다른 벽돌 깨러 가기
 
 
-def gravity():  # 벽돌이 깨졌을 때 아래로 떨어지는 함수
+def gravity():  # 벽돌이 깨졌을 때 아래로 떨어 지는 함수
     global blocks
     for width in range(W):  # 오른 쪽으로 90도 회전한 상태
         left_blocks = []
         for height in range(H - 1, -1, -1):
-            if blocks[width][height] != 0 or (0 in blocks[width][:height] and height == 0):  # 가장 아래 있으면서 0이 아닌 경우, 0이 아니고 나보다 아래에 0이 있는 경우
+            # 가장 아래 있으면서 0이 아닌 경우, 0이 아니고 나보다 아래에 0이 있는 경우
+            if blocks[width][height] != 0 or (0 in blocks[width][:height] and height == 0):
                 left_blocks.append(blocks[width][height])
                 blocks[width][height] = 0
         if left_blocks:  # 슬라이싱으로 내려줌

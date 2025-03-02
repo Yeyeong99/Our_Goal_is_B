@@ -249,12 +249,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/벽돌깨기/[Yeyeong]solution.py</url>
-          <line>61</line>
+          <line>64</line>
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/벽돌깨기/[Yeyeong]solution.py</url>
-          <line>55</line>
+          <line>57</line>
           <option name="timeStamp" value="96" />
         </line-breakpoint>
       </breakpoints>
