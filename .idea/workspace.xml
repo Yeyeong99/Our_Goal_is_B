@@ -7,6 +7,7 @@
     <list default="true" id="cb1d586a-74de-4655-aadb-05a3a7848037" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/벽돌깨기/[Yeyeong]solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/벽돌깨기/[Yeyeong]solution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/벽돌깨기/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/벽돌깨기/input.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -246,7 +247,22 @@
           <line>2</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/벽돌깨기/[Yeyeong]solution.py</url>
+          <line>61</line>
+          <option name="timeStamp" value="94" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/벽돌깨기/[Yeyeong]solution.py</url>
+          <line>55</line>
+          <option name="timeStamp" value="96" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="PythonConfigurationType">
+        <watch expression="blocks" language="Python" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
