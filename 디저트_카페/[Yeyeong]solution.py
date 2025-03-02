@@ -5,38 +5,64 @@ dx = [1, 1, -1, -1]
 dy = [1, -1, -1, 1]
 
 
-def dfs(i, j, direction, idx, visited, current_sum):
+def dfs(i, j, d, ds, idx, visited, current_sum):
     global max_sum
-    if direction == 4:
-        if i == idx[0][0] and j == idx[0][1]:
+    if idx:
+        if [i, j] == idx[0]:
             max_sum = max(max_sum, current_sum)
+
+    if visited:
+        if desserts[i][j] in visited:
             return
-    else:
-        # 범위 밖을 벗어남 or 같은 디저트
-        if (i < 0 or N <= i) or (j < 0 or N <= j) or desserts[i][j] in visited:
-            idx.pop()
-            before_idx = idx[-1]
 
-            nx = before_idx[0]
-            ny = before_idx[1]
-            direction += 1
-            visited.pop()
-            current_sum -= desserts[before_idx[0]][before_idx[1]]
-        else:
-            idx += [[i, j]]
-            visited += [desserts[i][j]]
-            current_sum += desserts[i][j]
+    idx += [[i, j]]
+    visited += [desserts[i][j]]
+    current_sum += 1
 
-            nx = i + dx[direction]
-            ny = j + dy[direction]
+    d %= 4
+    nx = dx[d] + i
+    ny = dy[d] + j
 
-            # 이미 방문한 카페로 되돌아 가는 경우 (Fig. 5)
-            if nx != idx[0][0] and ny != idx[0][1] and [nx, ny] in idx:
-                return
+    if 0 <= nx < N and 0 <= ny < N:
+        ds += [d]
+        dfs(nx, ny, d, ds, idx, visited, current_sum)
+        ds.pop()
 
-        dfs(nx, ny, direction, idx, visited, current_sum)
+    if ds[0] == 0:
+        d += 1
+        d %= 4
+        nx = dx[d] + i
+        ny = dy[d] + j
 
+        if 0 <= nx < N and 0 <= ny < N:
+            ds += [d]
+            dfs(nx, ny, d, ds, idx, visited, current_sum)
+            ds.pop()
 
+        d = 4 * 0 + d
+        d -= 1
+        idx.pop()
+        visited.pop()
+        current_sum -= 1
+
+    elif ds[0] == 1:
+        if d == 0:
+            d = 4
+        d -= 1
+
+        nx = dx[d] + i
+        ny = dy[d] + j
+
+        if 0 <= nx < N and 0 <= ny < N:
+            ds += [d]
+            dfs(nx, ny, d, ds, idx, visited, current_sum)
+            ds.pop()
+
+        d = 4 * 0 + d
+        d += 1
+        idx.pop()
+        visited.pop()
+        current_sum -= 1
 
 
 T = int(input())
@@ -44,10 +70,11 @@ T = int(input())
 for t in range(1, T + 1):
     N = int(input())
     desserts = [list(map(int, input().split())) for _ in range(N)]
-
-    max_sum = -float('inf')
+    dots = [[0, 0], [0, N - 1], [N - 1, 0], [N - 1, N - 1]]
+    max_sum = -1
     for x in range(N):
         for y in range(N):
-            dfs(x, y, 0, [], [], 0)
+            if [x, y] not in dots:
+                dfs(x, y, 0, [], [], [], 0)
 
     print(max_sum)

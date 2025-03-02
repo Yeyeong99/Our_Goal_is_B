@@ -6,8 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cb1d586a-74de-4655-aadb-05a3a7848037" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/벽돌깨기/[Yeyeong]solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/벽돌깨기/[Yeyeong]solution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/벽돌깨기/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/벽돌깨기/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,7 +40,7 @@
       <recent name="C:\SWEA_A\숫자 만들기" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.[Yeyeong]solution (4)">
+  <component name="RunManager" selected="Python.[Yeyeong]solution (1)">
     <configuration name="[Yeyeong]solution (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -149,10 +148,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.[Yeyeong]solution (1)" />
         <item itemvalue="Python.[Yeyeong]solution (4)" />
         <item itemvalue="Python.[Yeyeong]solution (3)" />
         <item itemvalue="Python.[Yeyeong]solution (2)" />
-        <item itemvalue="Python.[Yeyeong]solution (1)" />
         <item itemvalue="Python.[Yeyeong]solution" />
       </list>
     </recent_temporary>
@@ -183,46 +182,6 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>19</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>20</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>33</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>16</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
-          <line>17</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/등산로_조성/[Yeyeong]solution.py</url>
           <line>38</line>
           <option name="timeStamp" value="15" />
@@ -249,20 +208,50 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/벽돌깨기/[Yeyeong]solution.py</url>
-          <line>64</line>
+          <line>65</line>
           <option name="timeStamp" value="94" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/벽돌깨기/[Yeyeong]solution.py</url>
-          <line>57</line>
+          <line>58</line>
           <option name="timeStamp" value="96" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
+          <line>41</line>
+          <option name="timeStamp" value="100" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
+          <line>43</line>
+          <option name="timeStamp" value="101" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="102" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="109" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
+          <line>34</line>
+          <option name="timeStamp" value="110" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
+          <line>25</line>
+          <option name="timeStamp" value="113" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py</url>
+          <line>26</line>
+          <option name="timeStamp" value="114" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="PythonConfigurationType">
-        <watch expression="blocks" language="Python" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>
