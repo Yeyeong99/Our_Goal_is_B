@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cb1d586a-74de-4655-aadb-05a3a7848037" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/요리사/[Yeyeong]solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/요리사/[Yeyeong]solution.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/요리사/input.txt" beforeDir="false" afterPath="$PROJECT_DIR$/요리사/input.txt" afterDir="false" />
-    </list>
+    <list default="true" id="cb1d586a-74de-4655-aadb-05a3a7848037" name="변경" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
