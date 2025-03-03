@@ -2,48 +2,54 @@ import sys
 
 sys.stdin = open("input.txt", "r")
 
-# 선택할 벌통의 인덱스, 여태까지 선택한 벌통의 이익, 벌통의 합
-
-
-def dfs(honey_idx, honey_benefit, honey_sum):
-    global part_sum
-
-    # 백트래킹, 여태까지 선택한 꿀의 합이 C를 넘으면 이득을 알 필요가 없음
-    if honey_sum > C: return
-
-    # 선택할 벌통이 M에 도달하면 최대값 갱신
-    if honey_idx == M:
-        part_sum = max(part_sum, honey_benefit)
-
-    cnt_sum = honeys[i][j + honey_idx]
-    cnt_benefit = honeys[i][j + honey_idx] ** 2
-
-    # 현재 꿀을 선택 함
-    dfs(honey_idx + 1, honey_benefit + cnt_benefit, honey_sum + cnt_sum)
-
-    # 현재 꿀을 선택 안함
-    dfs(honey_idx + 1, honey_benefit, honey_sum)
-
+from itertools import combinations
 
 T = int(input())
 
 for t in range(1, T + 1):
     N, M, C = map(int, input().split())
     honeys = [list(map(int, input().split())) for _ in range(N)]
-    max_sum = 0
 
-    for i in range(N):
-        for j in range(N - M + 1):
-            part_sum = 0
+    firsts = []
+    for n in range(N):
+        for m in range(N - M + 1):
+            first = honeys[n][m: m + M]
+            if max(first) <= C:
+                fst_totals = []
+                for k in range(1, M + 1):
+                    fst_totals += list(combinations(first, k))
+                firsts += [[n, range(m, m + M), first, fst_totals]]
 
-            dfs(0, 0, 0)
-            fst_max = part_sum
+    total_sum = -float('inf')
+    for i, js, first, first_total in firsts:
+        if N == M:
+            start = i + 1
+        else:
+            start = i
+        for n in range(start, N):
+            for m in range(N - M + 1):
+                snd_totals = []
+                if N != M:
+                    if i != n and range(m, m + M) != js:
+                        second = honeys[n][m: m + M]
+                        if max(second) <= C:
+                            for k in range(1, M + 1):
+                                snd_totals += list(combinations(second, k))
+                else:
+                    second = honeys[n][m: m + M]
+                    if max(second) <= C:
+                        for k in range(1, M + 1):
+                            snd_totals += list(combinations(second, k))
+                fst_sum = -float('inf')
+                for fst in first_total:
+                    if sum(fst) <= C:
+                        current_sum = sum([num ** 2 for num in fst])
+                        fst_sum = max(fst_sum, current_sum)
 
-            for snd_i in range(i, N):
-                for snd_j in range(0, N - M + 1):
-                    if snd_i == i and snd_j < j + M:
-                        continue
-                    part_sum = 0
-                    dfs(snd_i, snd_j, 0)
-                    snd_max = part_sum
-                    max_sum = max(max_sum, fst_max + snd_max)
+                snd_sum = -float('inf')
+                for snd in snd_totals:
+                    if sum(snd) <= C:
+                        current_sum = sum([num ** 2 for num in snd])
+                        snd_sum = max(current_sum, snd_sum)
+                total_sum = max(total_sum, fst_sum + snd_sum)
+    print(f"#{t} {total_sum}")

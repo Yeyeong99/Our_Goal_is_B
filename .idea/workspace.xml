@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cb1d586a-74de-4655-aadb-05a3a7848037" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/디저트_카페/[Yeyeong]solution.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/벌꿀 채취/[Yeyeong]2115.py" beforeDir="false" afterPath="$PROJECT_DIR$/벌꿀 채취/[Yeyeong]2115.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,28 @@
       <recent name="C:\SWEA_A\숫자 만들기" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.[Yeyeong]solution (1)">
+  <component name="RunManager" selected="Python.[Yeyeong]2115">
+    <configuration name="[Yeyeong]2115" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="SWEA_A" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/벌꿀 채취" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/벌꿀 채취/[Yeyeong]2115.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="[Yeyeong]solution (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="SWEA_A" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -125,34 +146,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="[Yeyeong]solution" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="C:\practice_algorithm\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/숫자 만들기" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/숫자 만들기/[Yeyeong]solution.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.[Yeyeong]2115" />
         <item itemvalue="Python.[Yeyeong]solution (1)" />
         <item itemvalue="Python.[Yeyeong]solution (4)" />
         <item itemvalue="Python.[Yeyeong]solution (3)" />
         <item itemvalue="Python.[Yeyeong]solution (2)" />
-        <item itemvalue="Python.[Yeyeong]solution" />
       </list>
     </recent_temporary>
   </component>
