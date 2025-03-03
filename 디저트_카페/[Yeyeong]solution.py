@@ -9,7 +9,10 @@ def dfs(i, j, N, d, idx, visited, current_sum):
     global max_sum
 
     if idx:
-        if [i, j] in idx:
+        if [i, j] == idx[0] and d == 3:
+            max_sum = max(max_sum, current_sum)
+            return
+        elif [i, j] in idx:
             return
     if visited:
         if [i, j] not in idx and desserts[i][j] in visited:
@@ -26,9 +29,7 @@ def dfs(i, j, N, d, idx, visited, current_sum):
         dfs(nx, ny, N, d, idx, visited, current_sum)
 
     d += 1
-    if d == 4:
-        max_sum = max(max_sum, current_sum)
-        return
+    d %= 4
     nx = dx[d] + i
     ny = dy[d] + j
 
@@ -53,4 +54,4 @@ for t in range(1, T + 1):
             if [x, y] not in dots:
                 dfs(x, y, N, 0, [], [], 0)
 
-    print(max_sum)
+    print(f"#{t} {max_sum}")
