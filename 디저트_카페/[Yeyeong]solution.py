@@ -14,6 +14,8 @@ def dfs(i, j, N, d, idx, visited, current_sum):
             return
         elif [i, j] in idx:
             return
+        elif i < idx[0][0]:
+            return
     if visited:
         if [i, j] not in idx and desserts[i][j] in visited:
             return
