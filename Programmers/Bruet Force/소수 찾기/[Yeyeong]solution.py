@@ -14,6 +14,8 @@ def solution(numbers):
             for num in range(1, current + 1):
                 if current % num == 0:
                     prime_num.append(num)
+                if len(prime_num) >= 3:
+                    break
             if prime_num == [1, current]:
                 answer += 1
     
