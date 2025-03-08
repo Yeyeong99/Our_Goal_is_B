@@ -1,7 +1,7 @@
 ---
 name: Week
 about: 주마다 진행되는 알고리즘 풀이에 관한 이슈 템플릿
-title: ''
+title: Week
 labels: ''
 assignees: ''
 
