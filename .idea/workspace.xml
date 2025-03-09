@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb1d586a-74de-4655-aadb-05a3a7848037" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/개인/Sunho/txt/2055.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/개인/Sunho/baekjoon_2178.py" beforeDir="false" afterPath="$PROJECT_DIR$/개인/Sunho/baekjoon_2178.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/공통/Programmers/Bruet Force/소수 찾기/[Sunho]solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/공통/Programmers/Bruet Force/소수 찾기/[Sunho]solution.py" afterDir="false" />
@@ -36,15 +37,15 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/개인/Sunho/txt" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\OneDrive\바탕 화면\Our_Goal_is_B\개인\Sunho\txt" />
       <recent name="C:\Users\SSAFY\Desktop\all\SWEA_A\탈주범_검거" />
       <recent name="C:\SWEA_A\벽돌깨기" />
       <recent name="C:\SWEA_A\요리사" />
       <recent name="C:\Users\SSAFY\Desktop\all\SWEA_A\등산로_조성" />
-      <recent name="C:\SWEA_A\숫자 만들기" />
     </key>
   </component>
   <component name="RunManager" selected="Python.[Sunho]solution">
