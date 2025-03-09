@@ -24,7 +24,7 @@ def solution(brown, yellow):
             h += 2
             break
     
-    if w >= h:
+    if w >= h: 
         answer = [w, h]
     else:
         answer = [h, w]
