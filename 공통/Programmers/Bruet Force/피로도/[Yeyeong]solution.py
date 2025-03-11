@@ -1,9 +1,11 @@
 def solution(k, dungeons):
-    min_list = []
+    total_list = []
     def dfs(n, cnt, dungeons, visited):
-        nonlocal min_list
+        nonlocal total_list
         if len(visited) == n:
-            min_list.append(cnt)
+            print(visited)
+            total_list += [visited]
+            print(total_list)
         else:
             for d in range(len(dungeons)):
                 if dungeons[d] not in visited:
@@ -16,5 +18,15 @@ def solution(k, dungeons):
                     visited.pop()
 
     dfs(len(dungeons), 0, dungeons, [])
+    print(total_list)
+    max_num = -99999999
+#     numbers = 0
+#     for total in total_list:
+#         for i in range(len(dungeons) - 1):
+#             left = total[i][0] - total[i][1]
+#             if total[i + 1][0] < left:
+#                 numbers += 1
+#         max_num = max(numbers, max_num)
     
-    return max(min_list)
+    
+    return max_num
