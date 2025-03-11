@@ -1,7 +1,5 @@
 N = int(input())
 fst_person, snd_person = map(int, input().split())
-if fst_person > snd_person:
-    fst_person, snd_person = snd_person, fst_person
 
 M = int(input())
 family = {}
@@ -22,14 +20,17 @@ while stack:
     current = stack.pop()
     if current == snd_person:
         visited[current] = 1
-
         break
-
-    if family[current] and not visited[current]:
+    if snd_person in family[current]:
+        visited[current] = 1
+        visited[snd_person] = 1
+        cnt += 1
+        break
+    elif family[current] and not visited[current]:
         visited[current] = 1
         stack += family[current][::-1]
         cnt += 1
-    print(stack)
+
 if visited[snd_person]:
     print(cnt)
 else:
