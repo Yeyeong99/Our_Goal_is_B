@@ -12,8 +12,6 @@ def solution(n, wires):
     for v1, v2 in wires:
         adjust_list[v1].append(v2)
         adjust_list[v2].append(v1)
-        
-    print(adjust_list)
 
     visited = [False]*(n+1)    # 방문했는지 확인하는
     
@@ -28,22 +26,9 @@ def solution(n, wires):
     cnt = 0
 
     # 탐색 >> 가장 인접한 곳이 많은 곳을 나눈다.
-    def dfs(i, subset):
-        if i == len(adjust_list[max_v]):
-            return
-        
-        if len(subset) == len(adjust_list[max_v])-1:
-            for v in adjust_list[max_v]:
-                if v in subset:
-                    pass
-                
-            return
-        
-        visited[i] = True
-        dfs(0, subset+[adjust_list[max_v][i]])
-        
-        visited[i] = False
-        dfs(i+1, subset)
+    def dfs(cnt, subset):
+        # if len(subset) == len(adjust)
+        pass
                     
     return answer
 
