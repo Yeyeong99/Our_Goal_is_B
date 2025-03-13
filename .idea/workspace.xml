@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb1d586a-74de-4655-aadb-05a3a7848037" name="변경" comment="">
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/공통/Programmers/Bruet Force/전력망을 둘로 나누기/[Yeyeong]solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/공통/Programmers/Bruet Force/전력망을 둘로 나누기/[Yeyeong]solution.py" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/개인/Jiwon/baekjoon_21921.py" afterDir="false" />
+>>>>>>> 11a7abc0ef580857ce4306014c0413c6615dd2e6
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

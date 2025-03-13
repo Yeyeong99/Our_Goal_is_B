@@ -11,33 +11,34 @@ def solution(word):
     answer = 0
     
     char_list = ['A', 'E', 'I', 'O', 'U']
-    visited = [0]*5
+    visited = [0] * 5
     
     cnt = 0
     
-    def dfs(i, subset_list):
-        nonlocal cnt, answer
+    # 조합 찾기
+    def dfs(subset):
+        nonlocal cnt, word, answer
         
-        if i == 5:
-            return
-        
+        if subset:
+            cnt += 1
+            if word == ''.join(subset):
+                answer = cnt
+            
         if sum(visited) == 5:
             return
         
-        if subset_list:
-            cnt += 1
-            target = ''.join(subset_list)
-            print(target)
-            if target == word:
-                answer = cnt
-        
-        visited[i] += 1
-        dfs(0, subset_list+[char_list[i]])
-        
-        visited[i] -= 1
-        dfs(i+1, subset_list)
-        
-    dfs(0, [])
+        for i in range(5):
+            
+            if visited[i] < 6:
+                visited[i] += 1
+                dfs(subset+[char_list[i]])
+                
+                if answer != 0:
+                    break
+                
+                visited[i] -= 1
+            
+    dfs([])
         
     return answer
 
