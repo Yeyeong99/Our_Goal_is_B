@@ -27,7 +27,7 @@ def solution(n, wires):
         first = []
         visited = [0] * (n + 1)
         save_first(first_idx)
-        difference = abs((n - len(first)) - len(first))
+        difference = abs((n - len(first)) - len(first))  # 두 번째 그룹 수 = 전체 - 첫 번째 그룹 (n - len(first))
 
         min_difference = min(min_difference, difference)
 
