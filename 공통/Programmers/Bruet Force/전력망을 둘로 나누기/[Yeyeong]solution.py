@@ -30,4 +30,5 @@ def solution(n, wires):
         difference = abs((n - len(first)) - len(first))
 
         min_difference = min(min_difference, difference)
+
     return min_difference
