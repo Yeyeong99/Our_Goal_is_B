@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cb1d586a-74de-4655-aadb-05a3a7848037" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/개인/Yeyeong/baekjoon_2644.py" afterDir="false" />
+<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/공통/Programmers/Bruet Force/전력망을 둘로 나누기/[Yeyeong]solution.py" beforeDir="false" afterPath="$PROJECT_DIR$/공통/Programmers/Bruet Force/전력망을 둘로 나누기/[Yeyeong]solution.py" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/개인/Jiwon/baekjoon_21921.py" afterDir="false" />
+>>>>>>> 11a7abc0ef580857ce4306014c0413c6615dd2e6
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +50,7 @@
       <recent name="C:\Users\SSAFY\Desktop\all\SWEA_A\등산로_조성" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.[Sunho]solution">
+  <component name="RunManager" selected="Python.[Yeyeong]solution">
     <configuration name="[Sunho]solution" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Our_Goal_is_B" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -74,33 +79,12 @@
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
-      <option name="SDK_HOME" value="C:\practice_algorithm\venv\Scripts\python.exe" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/탈주범_검거/[Yeyeong]solution.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="baekjoon_2178" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Our_Goal_is_B" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/개인/Yeyeong" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/공통/Programmers/Bruet Force/전력망을 둘로 나누기" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/개인/Yeyeong/baekjoon_2178.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/공통/Programmers/Bruet Force/전력망을 둘로 나누기/[Yeyeong]solution.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -122,6 +106,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/개인/Yeyeong/baekjoon_2606.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="baekjoon_2644" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Our_Goal_is_B" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/개인/Yeyeong" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/개인/Yeyeong/baekjoon_2644.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -153,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.[Yeyeong]solution" />
+        <item itemvalue="Python.baekjoon_2644" />
         <item itemvalue="Python.[Sunho]solution" />
         <item itemvalue="Python.baekjoon_2667" />
         <item itemvalue="Python.baekjoon_2606" />
-        <item itemvalue="Python.baekjoon_2178" />
-        <item itemvalue="Python.[Yeyeong]solution" />
       </list>
     </recent_temporary>
   </component>
@@ -311,6 +316,21 @@
           <url>file://$PROJECT_DIR$/개인/Yeyeong/baekjoon_2667.py</url>
           <line>24</line>
           <option name="timeStamp" value="118" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/공통/Programmers/Bruet Force/전력망을 둘로 나누기/[Yeyeong]solution.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="119" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/공통/Programmers/Bruet Force/전력망을 둘로 나누기/[Yeyeong]solution.py</url>
+          <line>5</line>
+          <option name="timeStamp" value="120" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/공통/Programmers/Bruet Force/전력망을 둘로 나누기/[Yeyeong]solution.py</url>
+          <line>2</line>
+          <option name="timeStamp" value="121" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
