@@ -6,6 +6,43 @@ n개의 송전탑 - 하나의 트리 형태
 """
 
 def solution(n, wires):
+<<<<<<< HEAD
+    answer = n-1
+
+    for i in range(n-1):
+        adjust_list = [[0] for _ in range(n+1)]    # 인접리스트
+        visited = [False]*(n+1)
+        for idx, wire in enumerate(wires):
+            v1, v2 = wire[0], wire[1]
+            if idx != i:
+                adjust_list[v1].append(v2)
+                adjust_list[v2].append(v1)
+        cnt = 0
+
+        def dfs(n):
+            nonlocal cnt
+
+            stack = []
+            stack.append(n)
+            visited[n] = True
+
+            while stack:
+                current = stack.pop()
+
+                for v in adjust_list[current]:
+                    if not visited[v]:
+                        visited[v] = True
+                        stack.append(v)
+                        cnt += 1
+        dfs(1)
+
+        tower1 = cnt
+        tower2 = n - cnt
+        gap = abs(tower2 - tower1)
+
+        answer = min(answer, gap)
+
+=======
     answer = -1
     adjust_list = [[] for _ in range(n+1)]    # 인접리스트
     
@@ -30,9 +67,15 @@ def solution(n, wires):
         # if len(subset) == len(adjust)
         pass
                     
+>>>>>>> f6d22e028b872e4d90dd31f6e0132a197202c156
     return answer
 
 
 n = 9
 wires = [[1, 3], [2, 3], [3, 4], [4, 5], [4, 6], [4, 7], [7, 8], [7, 9]]
+<<<<<<< HEAD
+
+print(solution(n, wires))
+=======
 solution(n, wires)
+>>>>>>> f6d22e028b872e4d90dd31f6e0132a197202c156
