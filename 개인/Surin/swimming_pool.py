@@ -1,25 +1,3 @@
-# 완전 탐색을 사용한다.
-# 각 달에 4가지 케이스를 모두 확인하며 진행함.
-def recur(month, total):
-    global answer
-
-    if month > 12:    # 12월까지 확인하면
-        answer = min(answer, total)
-        return
-
-    if total > answer:
-        return
-
-    # 1일
-    recur(month+1, total + day*planner[month])
-    # 한달
-    recur(month+1, total + month1)
-    # 세달
-    recur(month+3, total + month3)
-    # 일년
-    recur(month+12, total + year)
-
-
 # 테스트 케이스
 T = int(input())
 
@@ -28,10 +6,22 @@ for tc in range(1, T+1):
     day, month1, month3, year = map(int, input().split())
 
     # 이용 계획
-    planner = [0] + list(map(int, input().split()))
+    plans = [0] + list(map(int, input().split()))
 
-    answer = int(21e8)
+    dp = [0] * 13
 
-    recur(1, 0)
+    # 시작점 초기화 (1, 2월) ==> 3달, 일년은 계산해주지 않는다.
+    dp[1] = min(plans[1]*day, month1)
+    dp[2] = dp[1] + min(plans[2]*day, month1)
+
+    # 3월부터는 반복하면서 계산해야 함.
+    for month in range(3, 13):
+        # N월의 최소 비용 후보
+        dp[month] = min(dp[month - 3] + month3,    # 1) N-3월에 3개월 이용권을 구입한 경우
+                        dp[month - 1] + month1,    # 2) N-1월의 최소 비용 + 한달권 구매
+                        dp[month - 1] + day*plans[month])    # 3) N-1월의 최소 비용 + 1일권 구매
+
+    # 12월의 누적 최소 금액, 1년권 비교
+    answer = min(dp[12], year)
 
     print(f'#{tc} {answer}')
