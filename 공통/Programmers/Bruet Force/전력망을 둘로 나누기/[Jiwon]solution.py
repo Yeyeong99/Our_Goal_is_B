@@ -1,12 +1,36 @@
+from collections import deque
+
+
+def count_nodes(graph, start, n):
+    visited = [False] * (n + 1)
+    queue = deque([start])
+    visited[start] = True
+    count = 1
+
+    while queue:
+        node = queue.popleft()
+        for neighbor in graph[node]:
+            if not visited[neighbor]:
+                visited[neighbor] = True
+                queue.append(neighbor)
+                count += 1
+
+    return count
+
+
 def solution(n, wires):
-    # bfs??
+    min_diff = float('inf')
 
-    graph = [[] for _ in range(n+1)]
-    answer = -1
-    return answer
+    for i in range(len(wires)):
+        temp_wires = wires[:i] + wires[i + 1:]  # 하나의 간선을 제거
 
+        graph = {i: [] for i in range(1, n + 1)}
+        for v1, v2 in temp_wires:
+            graph[v1].append(v2)
+            graph[v2].append(v1)
 
-# n 송전탑의 개수 # wires 전선정보
-print(solution(9, [[1,3],[2,3],[3,4],[4,5],[4,6],[4,7],[7,8],[7,9]]))
-print(solution(4, [[1,2],[2,3],[3,4]]))
-print(solution(7, [[1,2],[2,7],[3,7],[3,4],[4,5],[6,7]]))
+        sub_tree_size = count_nodes(graph, temp_wires[0][0], n)
+        diff = abs((n - sub_tree_size) - sub_tree_size)
+        min_diff = min(min_diff, diff)
+
+    return min_diff
