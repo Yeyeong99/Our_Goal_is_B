@@ -1,41 +1,31 @@
+from collections import deque
+
 def solution(begin, target, words):
-    from collections import deque
-    used = [0] * len(words)
+    if target not in words:
+        return 0
     
-    def find_word(b, t, w):
-        nonlocal used
-        
-        difference = 0
-        for i in range(len(b)):
-            if b[i] != t[i]:
-                difference += 1
-        if difference == 1:
-            return t
-        same = 0
-        
-        for i in range(len(w)):
-            for j in range(len(begin)):
-                if not used[i] and b[j] == w[i][j]:
-                    same += 1
-            if same == 2:
-                used[i] = 1
-                return w[i]
-            
-    def bfs(begin, target, count):
-        if target not in words:
-            return 0
-        
-        queue = deque()
-        queue.append((begin, target, count))
-        
+    used = [False] * len(words)
+    
+    def is_one_letter_diff(word1, word2):
+        diff = 0
+        for i in range(len(word1)):
+            if word1[i] != word2[i]:
+                diff += 1
+        return diff == 1
+
+    def bfs(begin, target):
+        queue = deque([(begin, 0)])  # (current word, step count)
         while queue:
-            b, t, cnt = queue.popleft()
-            new_word = find_word(b, t, words)
+            current_word, steps = queue.popleft()
             
-            if new_word == t:
-                return cnt + 1
+            if current_word == target:
+                return steps
             
-            queue.append((new_word, t, cnt + 1))
-                            
-    answer = bfs(begin, target, 0)
-    return answer
+            for i, word in enumerate(words):
+                if not used[i] and is_one_letter_diff(current_word, word):
+                    used[i] = True
+                    queue.append((word, steps + 1))
+        
+        return 0  # If no transformation sequence exists
+    
+    return bfs(begin, target)
