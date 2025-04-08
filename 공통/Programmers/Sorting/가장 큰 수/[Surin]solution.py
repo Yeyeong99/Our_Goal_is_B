@@ -7,17 +7,23 @@
 - 정렬된 결과 붙이기
 - 맨 앞이 0이면 전체는 0
 """
+from functools import cmp_to_key
+
+def compare(a, b):
+    if int(a + b) > int(b + a):
+        return -1    # a가 앞
+    elif int(a + b) < int(b + a):
+        return 1    # b가 앞
+    else:
+        return 0    # 순서 유지한다.
+
 
 def solution(numbers):
-    for a in range(0, len(numbers)-1):
-        for b in range(a+1, len(numbers)):
-            str_a, str_b = str(numbers[a]), str(numbers[b])
-            if int(str_a + str_b) < int(str_b + str_a):
-                numbers[a], numbers[b] = numbers[b], numbers[a]
+    numbers = list(map(str, numbers))    # 일단 문자열로 바꾸기
 
-    answer = ''.join(map(str, numbers))
+    answer = ''.join(sorted(numbers, key=cmp_to_key(compare)))
+    
+    if answer[0] == '0':
+        return '0'
+    
     return answer
-
-
-numbers = [3, 30, 34, 5, 9]
-print(solution(numbers))
