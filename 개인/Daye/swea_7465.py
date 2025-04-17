@@ -6,6 +6,7 @@
 # Union find 로 접근 
 
 # swea 창용 마을 무리의 개수 
+# 풀었움 
 
 T = int(input())
 
