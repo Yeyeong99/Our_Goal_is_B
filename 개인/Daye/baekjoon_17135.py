@@ -45,13 +45,14 @@ def move_enemy(graph):
     graph[0] = [0] * M
 
 def game_start(game_map,archer):
+    global result
     # 원본 맵 복사
     temp_map = [row[:] for row in game_map]
     # 현재 조합에서 죽인 적 수
     cnt = 0
 
     while True :
-
+    
         # 궁수들이 동시에 쏠 수 있는 적의 위치들
         # 동시에 같은 적을 죽일 수 있기에 집합 사용
         enemys = set()
@@ -72,9 +73,10 @@ def game_start(game_map,archer):
 
         # 맵에 적이 하나도 없음
         if sum(map(sum,temp_map)) == 0:
+            if cnt > result:
+                result = cnt
             break
 
-    return cnt
 
 # N 행 / M 열 / D 궁수 공격 거리 제한
 N, M, D = map(int,input().split())
@@ -90,13 +92,8 @@ archers = list(combinations(range(0,M),3))
 
 result = 0
 
-origin = [row[:] for row in game]
-
-
 # 궁수 조합 마다 게임 실행
 for archer in archers:
-    copied_game = [row[:] for row in origin]
-
-    result = max(result, game_start(copied_game, archer))
+  game_start(game, archer)
 
 print(result)
