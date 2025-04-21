@@ -14,67 +14,33 @@
     - 이동 못하면 0
 """
 
-# 파이프 타입 (가로1, 세로2, 대각선3) 찾는 함수
-def find_type(s, e):
-    pipe_type = (e[0]-s[0], e[1]-s[1])
-    if pipe_type == (1, 1):
-        return 2
-    elif pipe_type == (0, 1):
-        return 0
-    elif pipe_type == (1, 0):
-        return 1
-
-
-def move_pipe(s, e):
-    global answer
-
-    # 파이프 타입 확인하기
-    pipe_type = find_type(s, e)
-
-    if e == (N-1, N-1):    # 목표지점을 만나면
-        answer += 1    # 갈 수 있는 방법 추가
-        return
-
-    if e[0] >= N or e[1] >= N or e[0] < 0 or e[1] < 0:    # 범위를 넘어가면
-        return
-
-    if room[e[0]][e[1]] == 1:    # 벽이라면
-        return
-    if pipe_type == 2:    # 대각선이라면
-        if room[e[0]-1][e[1]] == 1 or room[e[0]][e[1]-1] == 1:
-            return
-
-    if pipe_type == 2:    # 현재 파이프가 대각선이라면
-        for next_type in [0, 1, 2]:
-            ns = e
-            ne = (e[0] + types[next_type][0], e[1] + types[next_type][1])
-            move_pipe(ns, ne)
-
-    elif pipe_type == 1:    # 세로 라면
-        for next_type in [1, 2]:
-            ns = e
-            ne = (e[0] + types[next_type][0], e[1] + types[next_type][1])
-            move_pipe(ns, ne)
-
-    elif pipe_type == 0:    # 가로 라면
-        for next_type in [0, 2]:
-            ns = e
-            ne = (e[0] + types[next_type][0], e[1] + types[next_type][1])
-            move_pipe(ns, ne)
-
-
 N = int(input())
-
 room = [list(map(int, input().split())) for _ in range(N)]
 
-answer = 0
+# dp[r][c][d]: (r, c)에 파이프 끝이 있고, 방향 d(0=가로, 1=세로, 2=대각선)일 때 경우의 수
+dp = [[[0]*3 for _ in range(N)] for _ in range(N)]
 
-start = (0, 0)
-end = (0, 1)
+# 초기 상태: (0, 1)에 가로 방향 파이프가 존재함
+dp[0][1][0] = 1
 
-types = [(0, 1), (1, 0), (1, 1)]    # 가로, 세로, 대각선
+for r in range(N):
+    for c in range(2, N):  # (0,0), (0,1)은 이미 사용됨
+        if room[r][c] == 1:
+            continue  # 벽이면 파이프 못 놓음
 
-move_pipe(start, end)
+        # ➡️ 가로 방향
+        # 가로 또는 대각선에서 →로 이동
+        dp[r][c][0] = dp[r][c-1][0] + dp[r][c-1][2]
 
-print(answer)
+        # ⬇️ 세로 방향 (r > 0일 때만 가능)
+        if r > 0:
+            dp[r][c][1] = dp[r-1][c][1] + dp[r-1][c][2]
 
+        # ↘️ 대각선 (3칸 다 비어 있어야 함)
+        if r > 0 and room[r-1][c] == 0 and room[r][c-1] == 0:
+            dp[r][c][2] = (
+                dp[r-1][c-1][0] + dp[r-1][c-1][1] + dp[r-1][c-1][2]
+            )
+
+# 최종 도착점에 오는 모든 방향의 경우의 수 합
+print(sum(dp[N-1][N-1]))
