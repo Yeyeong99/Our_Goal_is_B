@@ -3,8 +3,8 @@
 
 | 풀이 순서                                                                 | 풀이 여부 |
 | ------------------------------------------------------------------------- | --------- |
-| [완전탐색](https://school.programmers.co.kr/learn/courses/30/parts/12230) |           |
-| [DFS/BFS](https://school.programmers.co.kr/learn/courses/30/parts/12421)  |           |
+| [완전탐색](https://school.programmers.co.kr/learn/courses/30/parts/12230) |    ✔️    |
+| [DFS/BFS](https://school.programmers.co.kr/learn/courses/30/parts/12421)  |    ✔️        |
 | [정렬](https://school.programmers.co.kr/learn/courses/30/parts/12198)     |           |
 | [해시](https://school.programmers.co.kr/learn/courses/30/parts/12077)     |           |
 |                                                                           |           |

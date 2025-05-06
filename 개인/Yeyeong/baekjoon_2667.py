@@ -27,7 +27,6 @@ def bfs(i, j, visit):
                 if houses[nx][ny] == 0:
                     continue
                 queue.append((nx, ny))
-
     return numbers
 
 
