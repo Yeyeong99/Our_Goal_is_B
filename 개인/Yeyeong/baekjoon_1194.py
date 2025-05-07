@@ -6,40 +6,42 @@ dy = [0, 0, -1, 1]
 N, M = map(int, input().split())
 maps = [list(input()) for _ in range(N)]
 
-keys = ['a', 'b', 'c', 'd', 'e', 'f']
-doors = ['A', 'B', 'C', 'D', 'E', 'F']
+visited = [[[False] * (1 << 6) for _ in range(M)] for _ in range(N)]
 
-
-def bfs(i, j, d, current_keys):
+def bfs(sx, sy):
     queue = deque()
-    queue.append((i, j, d, current_keys))
-    while queue:
-        c_x, c_y, c_d, key = queue.popleft()
-        if maps[c_x][c_y] == '1':
-            return c_d + 1
-        if maps[c_x][c_y] in keys and maps[c_x][c_y] not in key:
-            key.append(maps[c_x][c_y])
-        for k in range(4):
-            nx = c_x + dx[k]
-            ny = c_y + dy[k]
+    queue.append((sx, sy, 0, 0))  # x, y, distance, key_bitmask
+    visited[sx][sy][0] = True
 
-            if nx < 0 or nx >= N or ny < 0 or ny >= M:
+    while queue:
+        x, y, dist, keys = queue.popleft()
+
+        if maps[x][y] == '1':
+            return dist
+
+        for i in range(4):
+            nx = x + dx[i]
+            ny = y + dy[i]
+
+            if not (0 <= nx < N and 0 <= ny < M):
                 continue
-            if maps[nx][ny] == '#':
+            cell = maps[nx][ny]
+            if cell == '#':
                 continue
-            if maps[nx][ny] in doors:
-                if maps[nx][ny].lower() not in key:
+
+            new_keys = keys
+            if 'a' <= cell <= 'f':
+                new_keys |= (1 << (ord(cell) - ord('a')))
+            if 'A' <= cell <= 'F':
+                if not (keys & (1 << (ord(cell) - ord('A')))):
                     continue
 
-            queue.append((nx, ny, c_d + 1, key))
+            if not visited[nx][ny][new_keys]:
+                visited[nx][ny][new_keys] = True
+                queue.append((nx, ny, dist + 1, new_keys))
+    return -1
 
-
-for n in range(N):
-    for m in range(M):
-        if maps[n][m] == '0':
-            result = bfs(n, m, 0, [])
-
-if result == None:
-    print(-1)
-else:
-    print(result)
+for i in range(N):
+    for j in range(M):
+        if maps[i][j] == '0':
+            print(bfs(i, j))
